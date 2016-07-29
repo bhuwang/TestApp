@@ -16,4 +16,11 @@
     </string>
     <string name="change_me">Change Me</string>
     <string name="bhuwan_gautam">Bhuwan Gautam</string>
+    <string name="gesture_detector_demo">Gesture Detector Demo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="submit_text">Submit Text</string>
+    <string name="display_top_text_here">Display top text here</string>
+    <string name="display_bottom_text_here">Display bottom text here</string>
 </resources>
