@@ -38,16 +38,18 @@
                 android:value="com.example.bhuwan.testapp.masterdetailflow.IteamListActivity" />
         </activity>
         <activity android:name=".overflowmenu.OverFlowActivity" />
-        <activity android:name=".transition.TransitionActivity">
+        <activity android:name=".transition.TransitionActivity" />
+        <activity android:name=".intent.NepalIntentActivity"></activity>
+        <activity android:name=".intent.UsIntentActivity" />
+        <activity android:name=".broadcast.SendBroadCastActivity">
         </activity>
-        <activity android:name=".intent.NepalIntentActivity">
+        <activity android:name=".multithreading.ThreadingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".intent.UsIntentActivity"></activity>
     </application>
 
 </manifest>
