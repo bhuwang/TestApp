@@ -23,4 +23,6 @@
     <string name="submit_text">Submit Text</string>
     <string name="display_top_text_here">Display top text here</string>
     <string name="display_bottom_text_here">Display bottom text here</string>
+    <string name="title_iteam_list">Items</string>
+    <string name="title_iteam_detail">Iteam Detail</string>
 </resources>
