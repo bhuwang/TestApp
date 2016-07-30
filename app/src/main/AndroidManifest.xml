@@ -27,7 +27,7 @@
         <activity
             android:name=".masterdetailflow.IteamListActivity"
             android:label="@string/title_iteam_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".masterdetailflow.IteamDetailActivity"
             android:label="@string/title_iteam_detail"
@@ -37,15 +37,17 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.bhuwan.testapp.masterdetailflow.IteamListActivity" />
         </activity>
-        <activity android:name=".overflowmenu.OverFlowActivity">
-        </activity>
+        <activity android:name=".overflowmenu.OverFlowActivity" />
         <activity android:name=".transition.TransitionActivity">
+        </activity>
+        <activity android:name=".intent.NepalIntentActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".intent.UsIntentActivity"></activity>
     </application>
 
 </manifest>
