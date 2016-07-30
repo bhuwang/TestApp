@@ -39,17 +39,19 @@
         </activity>
         <activity android:name=".overflowmenu.OverFlowActivity" />
         <activity android:name=".transition.TransitionActivity" />
-        <activity android:name=".intent.NepalIntentActivity"></activity>
-        <activity android:name=".intent.UsIntentActivity" />
-        <activity android:name=".broadcast.SendBroadCastActivity">
-        </activity>
-        <activity android:name=".multithreading.ThreadingActivity">
+        <activity android:name=".intent.NepalIntentActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".intent.UsIntentActivity" />
+        <activity android:name=".broadcast.SendBroadCastActivity">
+        </activity>
+        <activity android:name=".multithreading.ThreadingActivity">
+        </activity>
+        <service android:name=".service.FileDownloaderService"/>
     </application>
 
 </manifest>

@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.bhuwan.testapp.R;
+import com.example.bhuwan.testapp.service.FileDownloaderService;
 
 public class NepalIntentActivity extends AppCompatActivity {
 
@@ -21,6 +22,9 @@ public class NepalIntentActivity extends AppCompatActivity {
             TextView fromUsMessage = (TextView) findViewById(R.id.fromUsMessage);
             fromUsMessage.setText(usMessage.getString("usMessage").toString());
         }
+
+        // start the intent service
+        startService(new Intent(this, FileDownloaderService.class));
     }
 
     public void onClick(View view) {
