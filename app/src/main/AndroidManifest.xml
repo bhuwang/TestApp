@@ -13,8 +13,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        android:largeHeap="true"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true">
         <activity android:name=".HomeActivity" />
         <activity
             android:name=".LoginActivity"
@@ -46,9 +46,11 @@
 
         <service android:name=".service.FileDownloaderService" />
 
-        <activity android:name=".listview.ListViewActivity">
-        </activity>
+        <activity android:name=".listview.ListViewActivity"></activity>
         <activity android:name=".listview.customview.CustomListViewActivity">
+
+        </activity>
+        <activity android:name=".database.SaveToFileActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
