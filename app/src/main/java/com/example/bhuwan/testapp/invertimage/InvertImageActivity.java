@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -27,6 +28,9 @@ public class InvertImageActivity extends AppCompatActivity {
         bitmapImage = ((BitmapDrawable) originalImage).getBitmap();
         Bitmap invertedImage = invertedImage(bitmapImage);
         invertedImageView.setImageBitmap(invertedImage);
+
+        //Save the image to the users device
+        MediaStore.Images.Media.insertImage(getContentResolver(), invertedImage, "inv_image", "Anuska Sharma inverted image");
     }
 
     private Bitmap invertedImage(Bitmap original) {

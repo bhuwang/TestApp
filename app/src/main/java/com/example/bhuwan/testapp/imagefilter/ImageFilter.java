@@ -3,6 +3,7 @@ package com.example.bhuwan.testapp.imagefilter;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
@@ -24,6 +25,7 @@ public class ImageFilter extends AppCompatActivity {
         layers[1] = getResources().getDrawable(R.drawable.overlay);
         LayerDrawable layerDrawable = new LayerDrawable(layers);
         filterImageDisplay.setImageDrawable(layerDrawable);
+
     }
 
 }
