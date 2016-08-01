@@ -15,10 +15,10 @@
         android:id="@+id/originalImageView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:minHeight="200dp"
+        android:minHeight="150dp"
         android:nestedScrollingEnabled="false"
-        android:minWidth="200dp"
-        android:src="@drawable/richa" />
+        android:minWidth="150dp"
+        android:src="@drawable/anuska" />
 
     <ImageView
         android:layout_width="wrap_content"

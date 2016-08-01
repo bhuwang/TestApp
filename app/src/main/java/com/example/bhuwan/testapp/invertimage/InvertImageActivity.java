@@ -23,7 +23,7 @@ public class InvertImageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_invert_image);
 
         invertedImageView = (ImageView) findViewById(R.id.invertedImageView);
-        originalImage = getResources().getDrawable(R.drawable.richa);
+        originalImage = getResources().getDrawable(R.drawable.anuska);
         bitmapImage = ((BitmapDrawable) originalImage).getBitmap();
         Bitmap invertedImage = invertedImage(bitmapImage);
         invertedImageView.setImageBitmap(invertedImage);
