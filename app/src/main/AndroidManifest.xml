@@ -7,7 +7,10 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -49,10 +52,11 @@
 
         <activity android:name=".listview.ListViewActivity" />
         <activity android:name=".listview.customview.CustomListViewActivity" />
-        <activity android:name=".database.SaveToFileActivity"></activity>
-        <activity android:name=".video.VideoPlayActivity">
-        </activity>
+        <activity android:name=".database.SaveToFileActivity" />
+        <activity android:name=".video.VideoPlayActivity"></activity>
         <activity android:name=".camera.CameraActivity">
+        </activity>
+        <activity android:name=".invertimage.InvertImageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
