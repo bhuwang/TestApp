@@ -8,8 +8,6 @@ import android.widget.TextView;
 
 import com.example.bhuwan.testapp.R;
 
-import org.w3c.dom.Text;
-
 public class SaveToFileActivity extends AppCompatActivity {
 
     EditText infoToSave;
@@ -18,19 +16,16 @@ public class SaveToFileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_save_to_file);
-
-        System.out.println("iside oncreateeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.............................");
 
         infoToSave = (EditText) findViewById(R.id.infoToSave);
         displayInfoTextView = (TextView) findViewById(R.id.displayInfoTextView);
         dbHandler = new DBHandler(this, null,null, 1);
-        printDatabase();
+        displayData();
     }
 
-    private void printDatabase() {
+    private void displayData() {
 
         String dbResult = dbHandler.find();
         displayInfoTextView.setText(dbResult);
@@ -39,12 +34,12 @@ public class SaveToFileActivity extends AppCompatActivity {
 
     public void deleteFromFile(View view) {
         dbHandler.delete(infoToSave.getText().toString());
-        printDatabase();
+        displayData();
     }
 
     public void addToFile(View view) {
         Book book = new Book(infoToSave.getText().toString());
         dbHandler.add(book);
-        printDatabase();
+        displayData();
     }
 }

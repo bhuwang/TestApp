@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DBHandler extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
     private static final String DATABASE_NAME = "book.db";
     private static final String TABLE_BOOK = "book";
     private static final String COLUMN_ID = "id";
@@ -27,7 +27,6 @@ public class DBHandler extends SQLiteOpenHelper {
                 + TABLE_BOOK + "("
                 + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + COLUMN_NAME + " TEXT)";
-        System.out.println("Table Query::::::::::::::::::::::::::::: "+createTableQuery);
         db.execSQL(createTableQuery);
     }
 
@@ -58,19 +57,18 @@ public class DBHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
 
         // cursor point to a location in your results
-        Cursor c = db.rawQuery("SELECT * FROM " + TABLE_BOOK + " WHERE 1", null);
+        Cursor c = db.rawQuery("SELECT * FROM " + TABLE_BOOK, null);
 
-        // move cursor to the first row in your results
-        c.moveToFirst();
-        String result = "";
-        while (!c.isAfterLast()) {
-            String bookName = c.getString(c.getColumnIndex("name"));
-            if (bookName != null) {
-                result += bookName + "\n";
-            }
+        StringBuilder bookName = new StringBuilder("");
+        // looping through all rows and adding to list
+        if (c.moveToFirst()) {
+            do {
+                bookName.append(c.getString(c.getColumnIndex("name"))).append("\n");;
+            } while (c.moveToNext());
         }
+
         db.close();
-        return result;
+        return bookName.toString();
     }
 }
 
