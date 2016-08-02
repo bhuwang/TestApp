@@ -55,10 +55,16 @@
         <activity android:name=".database.SaveToFileActivity" />
         <activity android:name=".video.VideoPlayActivity" />
         <activity android:name=".camera.CameraActivity" />
-        <activity android:name=".invertimage.InvertImageActivity"></activity>
-        <activity android:name=".imagefilter.ImageFilter">
-        </activity>
+        <activity android:name=".invertimage.InvertImageActivity" />
+        <activity android:name=".imagefilter.ImageFilter"></activity>
         <activity android:name=".notification.NotificationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".style.CustomStyleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
